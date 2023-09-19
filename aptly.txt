@@ -1,0 +1,47 @@
+разворачивание aptly:
+на странице гитхаба aptly по инструкции установить aptly 
+установить bzip2 
+под рутом создать opt/aptly и var/www 
+поменять пользователя opt/aptly и var/www на ildar
+
+создать файл /etc/aptly.conf 
+{
+  "rootDir": "/opt/aptly",
+  "downloadConcurrency": 4,
+  "downloadSpeedLimit": 0,
+  "architectures": [],
+  "dependencyFollowSuggests": false,
+  "dependencyFollowRecommends": false,
+  "dependencyFollowAllVariants": false,
+  "dependencyFollowSource": false,
+  "dependencyVerboseResolve": false,
+  "gpgDisableSign": false,
+  "gpgDisableVerify": false,
+  "gpgProvider": "gpg",
+  "downloadSourcePackages": false,
+  "skipLegacyPool": true,
+  "ppaDistributorID": "ubuntu",
+  "ppaCodename": "",
+  "FileSystemPublishEndpoints": {
+    "myrepo": {
+      "rootDir": "/var/www/aptly",
+      "linkMethod": "symlink",
+      "verifyMethod": "md5"
+    }
+  },
+  "enableMetricsEndpoint": false
+}
+
+
+aptly repo create myrepo
+aptly repo add myrepo *.deb
+aptly publish repo -skip-signing -distribution=mydistr -component=main -architectures=amd64 myrepo filesystem:myrepo:myrepo
+
+установить nginx добавить в sites-enabled/default в раздел location autoindex on;
+
+
+deb [allow-insecure=yes] http://data/myrepo/ mydistr main
+
+
+
+https://drive.google.com/file/d/1cf6jo5y1j8_eVyy96OS8qQSUEBc3AvzM/view?usp=sharing

@@ -1,0 +1,16 @@
+Source: easy-rsa-conf
+Section: unknown
+Priority: optional
+Maintainer: Ildar Gilyazev <i.gilyazev@gilyazev-devops.ru>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/easy-rsa-conf
+#Vcs-Git: https://salsa.debian.org/debian/easy-rsa-conf.git
+Rules-Requires-Root: no
+
+Package: easy-rsa-conf
+Architecture: all
+Depends: easy-rsa
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

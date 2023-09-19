@@ -1,0 +1,11 @@
+Package: easy-rsa-conf
+Version: 0.1-1
+Architecture: all
+Maintainer: Ildar Gilyazev <i.gilyazev@gilyazev-devops.ru>
+Installed-Size: 28
+Depends: easy-rsa
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

@@ -1,0 +1,2 @@
+vars opt/easy-rsa/
+*.sh usr/bin/

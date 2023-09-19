@@ -1,0 +1,5 @@
+base.conf opt/openvpn/clients/
+server.conf etc/openvpn/server/
+openvpn_exporter opt/openvpn/
+openvpn_exporter.service etc/systemd/system/
+*.sh usr/bin

@@ -1,0 +1,42 @@
+1) Мониторинг всех linux инстансов одинаковый, при появлении нового, необходимо будет добавить только новый target в файл prometheus.yaml
+Для отображения статистики и отправки алертов используется система grafana. У grafana есть стандартный dashboard для инстансов на linux ОС.
+Там мониторится:
+-----------
+CPU Busy ((sum by(instance) (irate(node_cpu_seconds_total{instance="$node",job="$job", mode!="idle"}[$__rate_interval])) / on(instance) group_left sum by (instance)((irate(node_cpu_seconds_total{instance="$node",job="$job"}[$__rate_interval])))) * 100)
+-----------
+AVG 5 minut (avg(node_load5{instance="$node",job="$job"}) /  count(count(node_cpu_seconds_total{instance="$node",job="$job"}) by (cpu)) * 100)
+-----------
+AVG 15 минут (avg(node_load15{instance="$node",job="$job"}) /  count(count(node_cpu_seconds_total{instance="$node",job="$job"}) by (cpu)) * 100)
+-----------
+RAM used (((node_memory_MemTotal_bytes{instance="$node",job="$job"} - node_memory_MemFree_bytes{instance="$node",job="$job"}) / (node_memory_MemTotal_bytes{instance="$node",job="$job"} )) * 100)
+-----------
+SWAP Used (((node_memory_SwapTotal_bytes{instance="$node",job="$job"} - node_memory_SwapFree_bytes{instance="$node",job="$job"}) / (node_memory_SwapTotal_bytes{instance="$node",job="$job"} )) * 100)
+-----------
+Место на диске (100 - ((node_filesystem_avail_bytes{instance="$node",job="$job",mountpoint="/",fstype!="rootfs"} * 100) / node_filesystem_size_bytes{instance="$node",job="$job",mountpoint="/",fstype!="rootfs"}))
+
+Нужно просто выбрать инстанс из списка и посмотреть его сстатистику
+
+2)
+Для мониторинга Openvpn сервиса используется openvpn_exporter. Он покаывает:
+
+Статус (openvpn_up{job="ovpn-server_service"})
+------
+Колл-во подключеных клиентов (openvpn_server_connected_clients)
+------
+Общее кол-во байт полученных клиентом (openvpn_server_client_received_bytes_total{common_name=~"client-[0-9]"})
+-------
+Сколько байт клинт получил в течении одного дня (sum(increase(openvpn_server_client_received_bytes_total[1d])))
+-------
+Сколько байт клиент отправил в течении дня (sum(increase(openvpn_server_client_sent_bytes_total[1d])))
+
+
+
+
+Алертинг:
+1) поджигаем алерт если:
+avg5 больше 80%
+ram больше 80%
+Место на диске боьше 70%
+Сервис OpenVPN в down
+
+

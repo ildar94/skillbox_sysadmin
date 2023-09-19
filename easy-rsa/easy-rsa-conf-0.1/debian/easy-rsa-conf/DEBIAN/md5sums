@@ -1,0 +1,6 @@
+eb0c5f93d2e43159119a9513f83af3f1  opt/easy-rsa/vars
+eb62e3d1965f28120434c79cfcf5c5bc  usr/bin/install.sh
+a6ff180aa6310dd860214806fdd6fa5c  usr/share/doc-base/easy-rsa-conf.easy-rsa-conf
+cfec54fc35b53a8b008ca28db73ad90c  usr/share/doc/easy-rsa-conf/README.Debian
+f0ba3ef53bee9d337a982f3bace45e6f  usr/share/doc/easy-rsa-conf/changelog.Debian.gz
+b77579e47f4534345484f9d64c2712d6  usr/share/doc/easy-rsa-conf/copyright
