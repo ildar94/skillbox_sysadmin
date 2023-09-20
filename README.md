@@ -19,3 +19,7 @@
 В моей схеме 4 основных сервера расположены в зоне доступности *ru-central-a* и один запасной сервер dep repo в *ru-central-b*
 Схема расположена сдесь https://drive.google.com/file/d/1Ueqj2GZxYHGoB1mm5_U_XnZF-v_hkinx/view?usp=sharing
 https://drive.google.com/file/d/1U6dfylKBVkmAiTOZe4wus_GkSuKj1uHm/view?usp=sharing
+
+#### Публичные ip адреса для всех серверов, кроме OpenVPN являются динамическими. Серверу OpenVPN назначен статичесий адрес 158.160.100.225
+Общение между серверами происходит по hostname, чтобы не привязываться к ip адресам.
+
