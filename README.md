@@ -25,7 +25,7 @@ https://drive.google.com/file/d/1U6dfylKBVkmAiTOZe4wus_GkSuKj1uHm/view?usp=shari
 
 Для работы сервиса Yandex cloud-backup необходимо, чтобы релиз ubuntu был не выше 20.04 это важно
 
-
+[Contribution guidelines for this project](Docs/Инструкция для системного администратора.docx)
 
 
 
