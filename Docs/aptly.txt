@@ -43,5 +43,3 @@ aptly publish repo -skip-signing -distribution=mydistr -component=main -architec
 deb [allow-insecure=yes] http://data/myrepo/ mydistr main
 
 
-
-https://drive.google.com/file/d/1cf6jo5y1j8_eVyy96OS8qQSUEBc3AvzM/view?usp=sharing
