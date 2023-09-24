@@ -47,19 +47,23 @@
 > > отказоустойчивость.txt
 > > aptly.txt - разворачивание aptly сервера локльных deb репозиториев
 > > ya_cloud_topology.drawio.pdf - схема серверов
+> 
 > all_deb - директория с deb пакетами для удобного публикования во время конфигурации локально deb репозитория
 > > iptables.sh - скрипт для конфигурации iptables на сервере data
 > > grafana_10.1.2_amd64.deb - deb пакет для установки grafana на сервер monitor
 > > monitoring_0.1-1_all.deb - deb пакет для установки и настройки prometheus на сервер monitor
 > > easy-rsa-conf_0.1-1_all.deb -  deb пакет для установки и настройки easy-rsa  на сервер trust-center
-> > config-ovpn_0.1-1_all.deb  deb пакет для установки и настройки easy-rsa,openvpn  на сервер ovpn-server 
+> > config-ovpn_0.1-1_all.deb  deb пакет для установки и настройки easy-rsa,openvpn  на сервер ovpn-server
+> 
 > easy-rsa
 > > easy-rsa-conf_0.1-1_all.deb - deb пакет для настройки сервера trust-center
 > > easy-rsa-conf-0.1 - директория где лежат скрипты и файлы для создания этого пакета, на случай если потребуется пересобрать пакет с изменениями
+> 
 > ovpn-server
 > > config-ovpn_0.1-1_all.deb - deb пакет для настройки сервера ovpn-server
 > > v0.3.0.tar.gz - полный архив ovpn-exporter для prometheus
 > > config-ovpn-0.1 иректория где лежат скрипты и файлы для создания этого пакета, на случай если потребуется пересобрать пакет с изменениями
+> 
 > prometheus
 > > описание.txt - описание алертов
 > > monitoring_0.1-1_all.deb - deb пакет для настройки сервера monitor
