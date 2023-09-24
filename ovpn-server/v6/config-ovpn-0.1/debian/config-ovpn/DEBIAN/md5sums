@@ -1,9 +1,0 @@
-46243b3ba3568b6e1ebb4017f3afeade  opt/openvpn/clients/base.conf
-2e5a09e96fdf79e224905eb5b684484c  opt/openvpn/openvpn_exporter
-d38c47bef8857a80c16697802cf9591b  usr/bin/create_client.sh
-ac501018649e01903b6213abde887cb3  usr/bin/iptables.sh
-5f18c58860af7eda9c491f90d377cee6  usr/bin/make_config.sh
-7011e039681b8132a72172b881c39917  usr/bin/prepare_server.sh
-15e774b77b79ac7c270300c712e15da9  usr/share/doc/config-ovpn/README.Debian
-d0daf86e58970ec98820a6fad8495bd0  usr/share/doc/config-ovpn/changelog.Debian.gz
-3592e6507ddb53d2d4c2775aa47ba0c6  usr/share/doc/config-ovpn/copyright

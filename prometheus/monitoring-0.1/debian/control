@@ -1,0 +1,16 @@
+Source: monitoring
+Section: unknown
+Priority: optional
+Maintainer: Ildar Gilyazev <ildar@local>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/monitoring
+#Vcs-Git: https://salsa.debian.org/debian/monitoring.git
+Rules-Requires-Root: no
+
+Package: monitoring
+Architecture: all
+Depends: prometheus,prometheus-node-exporter
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

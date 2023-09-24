@@ -1,2 +1,0 @@
-/etc/openvpn/server/server.conf
-/etc/systemd/system/openvpn_exporter.service

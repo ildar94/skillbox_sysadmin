@@ -1,4 +1,0 @@
-grafana.db var/lib/grafana/
-grafana.ini etc/grafana/
-iptables.sh usr/bin/
-prometheus.yml tmp/

@@ -1,0 +1,11 @@
+Package: monitoring
+Version: 0.1-1
+Architecture: all
+Maintainer: Ildar Gilyazev <ildar@local>
+Installed-Size: 2592
+Depends: prometheus, prometheus-node-exporter
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

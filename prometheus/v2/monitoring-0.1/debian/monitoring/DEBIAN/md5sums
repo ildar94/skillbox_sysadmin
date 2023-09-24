@@ -1,7 +1,0 @@
-0d9b9b465a8f0d6ea80ea4aa31341b6e  tmp/prometheus.yml
-079a8bdacedb9a4d7d38448a7d7242f9  usr/bin/iptables.sh
-b83a02c888df8470b050e7cbbbb46187  usr/share/doc-base/monitoring.monitoring
-5136a4be2723bb46db28543d57409528  usr/share/doc/monitoring/README.Debian
-fef07297d1f262bc3d421f4c90fe3bcf  usr/share/doc/monitoring/changelog.Debian.gz
-8c5c20819a5172eebe1c0974db9774bd  usr/share/doc/monitoring/copyright
-ae69b01fa6e93bfa0bd6dc7cf1892c46  var/lib/grafana/grafana.db
