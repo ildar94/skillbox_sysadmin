@@ -17,22 +17,22 @@
 ### Требование к инфраструктуре:
 Созданное облако в yandex cloud, операционная система ubuntu 20.04, один статический ip адрес.
 
-> ### Необходимые программы и настройки для работы с проектом:
-> Необходимо установить yandex cloud CLI, для удоства работы
-> > https://cloud.yandex.ru/docs/cli/quickstart
-> git
-> > https://git-scm.com/book/ru/v2/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-Git
-> Ниже инструкция как создать пару ssh ключей для доступа к ВМ
-> > https://cloud.yandex.ru/docs/compute/operations/vm-connect/ssh#creating-ssh-keys
+### Необходимые программы и настройки для работы с проектом:
+1. Необходимо установить yandex cloud CLI, для удоства работы
+  - https://cloud.yandex.ru/docs/cli/quickstart
+2. git
+  - https://git-scm.com/book/ru/v2/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-Git
+3. Ниже инструкция как создать пару ssh ключей для доступа к ВМ
+  - https://cloud.yandex.ru/docs/compute/operations/vm-connect/ssh#creating-ssh-keys
 
 ### Инструкция по разворачиванию проекта:
 [Инструкция по развертыванию проекта ](Docs/Инструкция%20для%20системного%20администратора.docx)
 
 ### состав серверов проекта:
-> trust-center – Центр сертификации
-> ovpn-server – Сервер OpenVPN
-> data – локальный репозиторий deb пакетов и хранилище конфиг. Файлов
-> monitor – Prometheus + Grafana
+1. trust-center – Центр сертификации
+2. ovpn-server – Сервер OpenVPN
+3. data – локальный репозиторий deb пакетов и хранилище конфиг. Файлов
+4. monitor – Prometheus + Grafana
 
 ### схема взаимодействия компонентов/серверов:
 ![image](https://github.com/ildar94/skillbox_sysadmin/assets/36185301/1037c7eb-d3fb-4227-a767-e8248aa77135)
@@ -47,29 +47,23 @@
   - отказоустойчивость.txt
   - aptly.txt - разворачивание aptly сервера локльных deb репозиториев
   - ya_cloud_topology.drawio.pdf - схема серверов
-
-
-> 
-> all_deb - директория с deb пакетами для удобного публикования во время конфигурации локально deb репозитория
-> > iptables.sh - скрипт для конфигурации iptables на сервере data
-> > grafana_10.1.2_amd64.deb - deb пакет для установки grafana на сервер monitor
-> > monitoring_0.1-1_all.deb - deb пакет для установки и настройки prometheus на сервер monitor
-> > easy-rsa-conf_0.1-1_all.deb -  deb пакет для установки и настройки easy-rsa  на сервер trust-center
-> > config-ovpn_0.1-1_all.deb  deb пакет для установки и настройки easy-rsa,openvpn  на сервер ovpn-server
-> 
-> easy-rsa
-> > easy-rsa-conf_0.1-1_all.deb - deb пакет для настройки сервера trust-center
-> > easy-rsa-conf-0.1 - директория где лежат скрипты и файлы для создания этого пакета, на случай если потребуется пересобрать пакет с изменениями
-> 
-> ovpn-server
-> > config-ovpn_0.1-1_all.deb - deb пакет для настройки сервера ovpn-server
-> > v0.3.0.tar.gz - полный архив ovpn-exporter для prometheus
-> > config-ovpn-0.1 иректория где лежат скрипты и файлы для создания этого пакета, на случай если потребуется пересобрать пакет с изменениями
-> 
-> prometheus
-> > описание.txt - описание алертов
-> > monitoring_0.1-1_all.deb - deb пакет для настройки сервера monitor
-> > описание.txt - описание алертов
+2.  all_deb - директория с deb пакетами для удобного публикования во время конфигурации локально deb репозитория
+  - iptables.sh - скрипт для конфигурации iptables на сервере data
+  - grafana_10.1.2_amd64.deb - deb пакет для установки grafana на сервер monitor
+  - monitoring_0.1-1_all.deb - deb пакет для установки и настройки prometheus на сервер monitor
+  - easy-rsa-conf_0.1-1_all.deb -  deb пакет для установки и настройки easy-rsa  на сервер trust-center
+  - config-ovpn_0.1-1_all.deb  deb пакет для установки и настройки easy-rsa,openvpn  на сервер ovpn-server
+3. easy-rsa
+  - easy-rsa-conf_0.1-1_all.deb - deb пакет для настройки сервера trust-center
+  - easy-rsa-conf-0.1 - директория где лежат скрипты и файлы для создания этого пакета, на случай если потребуется пересобрать пакет с изменениями
+4. ovpn-server
+  - config-ovpn_0.1-1_all.deb - deb пакет для настройки сервера ovpn-server
+  - v0.3.0.tar.gz - полный архив ovpn-exporter для prometheus
+  - config-ovpn-0.1 иректория где лежат скрипты и файлы для создания этого пакета, на случай если потребуется пересобрать пакет с изменениями
+5. prometheus
+  - описание.txt - описание алертов
+  - monitoring_0.1-1_all.deb - deb пакет для настройки сервера monitor
+  - описание.txt - описание алертов
 
 
 
